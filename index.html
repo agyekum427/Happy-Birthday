@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday, Kate Abena Serwaa ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: url('https://images.unsplash.com/photo-1508979828645-89dda2636b56?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
+        text-align: center;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0; left: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: -1;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-top: 60px;
+        animation: fadeIn 2s ease;
+    }
+
+    p {
+        font-size: 1.3rem;
+        width: 85%;
+        max-width: 700px;
+        margin: auto;
+        animation: fadeIn 3s ease;
+        line-height: 1.7;
+    }
+
+    .button {
+        background: #fff;
+        color: #d63a6c;
+        padding: 15px 35px;
+        font-size: 1.1rem;
+        border-radius: 30px;
+        margin-top: 40px;
+        text-decoration: none;
+        display: inline-block;
+        animation: fadeIn 3.5s ease;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: 600;
+    }
+
+    .button:hover {
+        background: #ffe6eb;
+    }
+
+    #secret {
+        margin-top: 40px;
+        display:none;
+        animation: fadeIn 2s ease;
+        font-size: 1.4rem;
+        line-height: 1.8;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+        position: fixed;
+        font-size: 20px;
+        color: pink;
+        animation: floatUp 4s linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/12/audio_5ca82ed2e7.mp3?filename=romantic-piano-ambient-118190.mp3" type="audio/mpeg">
+</audio>
+
+<h1>Happy Birthday, Kate Abena Serwaa 🎉❤️</h1>
+
+<p>
+    Today, the world celebrates someone truly extraordinary.  
+    A woman whose smile lights up every room…  
+    whose kindness softens the hardest moments…  
+    and whose presence makes life feel beautifully complete.  
+</p>
+
+<a class="button" onclick="showMessage()">Click for Your Surprise 🎁</a>
+<br><br>
+<a href="love-letter.html" class="button">Read Your Love Letter 💌</a>
+
+<h2 id="secret">
+    My dearest Kate Abena Serwaa,  
+    <br><br>
+    You are the calm to my busy mind,  
+    the joy in my daily moments,  
+    and the love I never saw coming.  
+    <br><br>
+    I cherish your voice, your strength, your softness,  
+    and the way you make everything feel warm and safe.  
+    <br><br>
+    I pray your new year comes with blessings, growth, peace,  
+    and a love that never stops deepening between us.  
+    <br><br>
+    ❤️ Happy Birthday, My Love ❤️
+</h2>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "-20px";
+    heart.style.fontSize = (20 + Math.random()*20) + "px";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(), 4000);
+}
+setInterval(createHeart, 500);
+
+function showMessage() {
+    document.getElementById("secret").style.display = "block";
+}
+</script>
+
+</body>
+</html>
